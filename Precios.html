@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabla de Precios</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f6f6;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 36px;
+      color: #333;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .table-container {
+      width: 300px;
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .table-container:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #666;
+    }
+
+    .buy-button {
+      background-color: #ff5777;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      border-radius: 5px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .buy-button:hover {
+      background-color: #f7486f;
+    }
+
+    .product-description {
+      text-align: justify;
+      margin-top: 10px;
+      font-size: 12px;
+      color: #555;
+    }
+
+    /* Additional Styles */
+
+    .container {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .buy-button {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s;
+      z-index: 1;
+    }
+
+    .buy-button:hover {
+      background-color: #f7486f;
+      transform: scale(1.05);
+    }
+
+    .buy-button::before {
+      content: '';
+      position: absolute;
+      top: -110%;
+      left: -110%;
+      width: 120%;
+      height: 120%;
+      background-color: rgba(255, 255, 255, 0.5);
+      transform: rotate(45deg);
+      transition: all 0.3s;
+      z-index: -1;
+    }
+
+    .buy-button:hover::before {
+      top: -10%;
+      left: -10%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tabla de Precios</h1>
+  <div class="container">
+    <div class="table-container">
+      <h2>Tabla 1</h2>
+      <table>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+        </tr>
+        <tr>
+          <td>Producto 1</td>
+          <td>$10.00</td>
+        </tr>
+        <tr>
+          <td>Producto 2</td>
+          <td>$15.00</td>
+        </tr>
+      </table>
+      <button class="buy-button">Comprar</button>
+      <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque eget mauris tempor dignissim.</p>
+    </div>
+    <div class="table-container">
+      <h2>Tabla 2</h2>
+      <table>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+        </tr>
+        <tr>
+          <td>Producto 3</td>
+          <td>$20.00</td>
+        </tr>
+        <tr>
+          <td>Producto 4</td>
+          <td>$25.00</td>
+        </tr>
+      </table>
+      <button class="buy-button">Comprar</button>
+      <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque eget mauris tempor dignissim.</p>
+    </div>
+    <div class="table-container">
+      <h2>Tabla 3</h2>
+      <table>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+        </tr>
+        <tr>
+          <td>Producto 5</td>
+          <td>$30.00</td>
+        </tr>
+        <tr>
+          <td>Producto 6</td>
+          <td>$35.00</td>
+        </tr>
+      </table>
+      <button class="buy-button">Comprar</button>
+      <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque eget mauris tempor dignissim.</p>
+    </div>
+    <div class="table-container">
+      <h2>Tabla 4</h2>
+      <table>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+        </tr>
+        <tr>
+          <td>Producto 7</td>
+          <td>$40.00</td>
+        </tr>
+        <tr>
+          <td>Producto 8</td>
+          <td>$45.00</td>
+        </tr>
+      </table>
+      <button class="buy-button">Comprar</button>
+      <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque eget mauris tempor dignissim.</p>
+    </div>
+  </div>
+</body>
+</html>
